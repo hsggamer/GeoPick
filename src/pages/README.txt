@@ -1,0 +1,1 @@
+These are the pages (AKA screens), you will use the components to form the screens here. These screens will be accessible by users directly and viewable according to routes
