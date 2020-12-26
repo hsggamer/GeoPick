@@ -1,0 +1,330 @@
+guess the location:
+
+import React from "react";
+import styles from "./GuessTheLocationInterface.module.scss";
+
+const GuessTheLocationInterface = ({
+  guessTheLocation = (
+    <>
+      Guess the{" "}
+      <strong className={styles.guessTheLocationEmphasis2}>
+        location
+      </strong>
+    </>
+  )
+}) => {
+  return (
+    <div className={styles.guessTheLocationInterface}>
+      <div className={styles.relativeWrapperOne}>
+        <div className={styles.thePin}>
+          <img
+            alt=""
+            className={styles.pin3}
+            src="https://static.overlay-tech.com/assets/5c946634-311f-4a1e-94b3-fa3e11728406.svg"
+          />
+          <img
+            alt=""
+            className={styles.pin2}
+            src="https://static.overlay-tech.com/assets/fae2a009-115e-4138-a2b3-d64f531a5a60.svg"
+          />
+          <img
+            alt=""
+            className={styles.pin1}
+            src="https://static.overlay-tech.com/assets/d48e6f5c-c3f5-47ca-804e-a0568074804b.svg"
+          />
+        </div>
+        <p className={styles.guessTheLocation}>
+          {guessTheLocation}
+        </p>
+      </div>
+      <div className={styles.option1} />
+      <div className={styles.option1} />
+      <div className={styles.option1} />
+    </div>
+  );
+};
+
+export default GuessTheLocationInterface;
+
+SCSS:
+.guessTheLocationInterface {
+  background-color: $black-g-p;
+  border-radius: 22px;
+  padding: 10px 8px 20px 7px;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.relativeWrapperOne {
+  margin-bottom: 17px;
+  margin-left: 2px;
+  position: relative;
+}
+.thePin {
+  padding: 0 4px 3px 0;
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  right: -17px;
+  bottom: -1px;
+}
+.pin3 {
+  position: relative;
+  transform: rotate(15deg);
+}
+.pin2 {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  transform: rotate(15deg);
+}
+.pin1 {
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  transform: rotate(-67.2deg);
+}
+.guessTheLocation {
+  width: 65px;
+  position: relative;
+  @include normal;
+  color: $orange-g-p;
+  & .guessTheLocationEmphasis2 {
+    @include semibold;
+    color: $orange-g-p;
+    letter-spacing: 1px;
+  }
+}
+.option1 {
+  width: 125px;
+  height: 25px;
+  background-color: $white-g-p;
+  border-radius: 22px;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+  &:not(:last-of-type) {
+    margin-bottom: 14px;
+  }
+}
+
+uploadMessageButton:
+
+import React from "react";
+import styles from "./UploadMessageButton.module.scss";
+
+const UploadMessageButton = ({
+  cancel = "Cancel",
+  yes = "Yes!"
+}) => {
+  return (
+    <div className={styles.uploadMessageButton}>
+      <div className={styles.flexWrapperTwo}>
+        <p className={styles.cancel}>{cancel}</p>
+      </div>
+      <div className={styles.flexWrapperOne}>
+        <p className={styles.yes}>{yes}</p>
+      </div>
+    </div>
+  );
+};
+
+export default UploadMessageButton;
+
+SCSS:
+
+.uploadMessageButton {
+  display: flex;
+  align-items: center;
+}
+.flexWrapperTwo {
+  margin-right: 37px;
+  border-radius: 18px;
+  padding: 12px 21px 11px 22px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(245, 105, 32, 1);
+}
+.cancel {
+  font-family: "Poppins";
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 24px;
+  color: $orange-g-p;
+}
+.flexWrapperOne {
+  background-color: rgba(245, 105, 32, 1);
+  border-radius: 18px;
+  padding: 13px 38px 12px 39px;
+  display: flex;
+  align-items: center;
+}
+.yes {
+  font-family: "Poppins";
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgba(250, 250, 250, 1);
+}
+
+commentBox:
+
+import React from "react";
+import styles from "./Impressions.module.scss";
+
+const Impressions = () => {
+  return (
+    <div className={styles.impressions}>
+      <div className={styles.upvotes} />
+      <div className={styles.commentBox} />
+    </div>
+  );
+};
+
+export default Impressions;
+
+SCSS:
+
+.impressions {
+  background-color: $white-g-p;
+  border-radius: 0px 0px 11px 11px;
+  padding: 6px 12px 6px 15px;
+  display: flex;
+  align-items: center;
+}
+.upvotes {
+  width: 22px;
+  height: 23px;
+  margin-right: 57px;
+  background-image: url("https://static.overlay-tech.com/assets/ba7df764-9570-4002-a7e4-d282de0002fb.svg");
+}
+.commentBox {
+  width: 267px;
+  height: 27px;
+  background-color: $greay-g-p;
+  border-radius: 11px 11px 11px 0px;
+}
+
+Profile Page buttons:
+
+import React from "react";
+import styles from "./ProfilePageButtons.module.scss";
+
+const ProfilePageButtons = () => {
+  return (
+    <div className={styles.profilePageButtons}>
+      <img
+        alt=""
+        className={styles.signOutButton}
+        src="https://static.overlay-tech.com/assets/609c663e-68d8-4660-93a2-a94f45f18376.png"
+      />
+      <img
+        alt=""
+        className={styles.signOutButton}
+        src="https://static.overlay-tech.com/assets/32932bfe-742a-46c3-8543-38224bd3ad7d.png"
+      />
+    </div>
+  );
+};
+
+export default ProfilePageButtons;
+
+SCSS:
+
+.profilePageButtons {
+  display: flex;
+  align-items: flex-start;
+}
+.signOutButton {
+  &:not(:last-of-type) {
+    margin-right: 26px;
+  }
+}
+
+NAVBAR:
+import React from "react";
+import styles from "./NAVBAR.module.scss";
+
+const NAVBAR = () => {
+  return (
+    <div className={styles.navbar}>
+      <img
+        alt=""
+        className={styles.home}
+        src="https://static.overlay-tech.com/assets/3385ae0f-5b94-477d-bc15-1e6b720c6a04.svg"
+      />
+      <img
+        alt=""
+        className={styles.search}
+        src="https://static.overlay-tech.com/assets/3ae59cbd-7b9e-45d3-8c8b-8d1634fea41f.svg"
+      />
+      <div className={styles.add}>
+        <img
+          alt=""
+          src="https://static.overlay-tech.com/assets/201f86a4-c2f1-48f7-9f96-f70488c6d69a.svg"
+        />
+      </div>
+      <img
+        alt=""
+        className={styles.vector}
+        src="https://static.overlay-tech.com/assets/c43ff8b9-8394-4db8-a4fd-583a2c465b3b.svg"
+      />
+      <img
+        alt=""
+        className={styles.home}
+        src="https://static.overlay-tech.com/assets/2c09e0e0-0361-42a4-8d12-aab577430305.svg"
+      />
+    </div>
+  );
+};
+
+export default NAVBAR;
+
+SCSS:
+
+.navbar {
+  display: flex;
+  align-items: flex-start;
+}
+.home {
+  margin-top: 19px;
+  &:not(:last-of-type) {
+    margin-right: 48px;
+  }
+}
+.search {
+  margin-top: 19px;
+  margin-right: 46px;
+}
+.add {
+  background-color: rgba(245, 105, 32, 1);
+  margin-right: 44px;
+  border-radius: 50%;
+  padding: 10px 8px 11px 7px;
+  display: flex;
+  align-items: center;
+}
+.vector {
+  margin-top: 15px;
+  margin-right: 46px;
+}
+
+TEXTBOX:
+
+import React from "react";
+import styles from "./TextPlaceholder.module.scss";
+
+const TextPlaceholder = () => {
+  return <div className={styles.textPlaceholder} />;
+};
+
+export default TextPlaceholder;
+
+SCSS:
+
+.textPlaceholder {
+  width: 318px;
+  height: 51px;
+  background-color: $white-g-p;
+  border-radius: 20px;
+  border: 1px solid rgba(245, 105, 32, 1);
+}
