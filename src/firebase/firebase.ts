@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import app from 'firebase/app';
 import 'firebase/auth';
-import cred from '../constants/firebase-creds.json'
-import "dot-env"
+import cred from '../constants/firebase-creds.json';
+import 'dot-env';
 
 const prodConfig = {
     apiKey: cred.REACT_APP_API_KEY,
@@ -21,7 +22,7 @@ const devConfig = {
     messagingSenderId: cred.REACT_APP_DEV_MESSAGING_SENDER_ID,
 };
 
-const config = process.env.NODE_ENV === "production" ? prodConfig : devConfig
+const config = process.env.NODE_ENV === 'production' ? prodConfig : devConfig;
 
 class Firebase {
     auth: app.auth.Auth; // variable assigned for auth
@@ -39,12 +40,10 @@ class Firebase {
     doCreateUserWithEmailAndPassword = (email: string, password: string) =>
         this.auth.createUserWithEmailAndPassword(email, password);
 
-    // sign in with email and pass
     doSignInWithEmailAndPassword = (email: string, password: string) =>
         this.auth.signInWithEmailAndPassword(email, password);
 
     doSignOut = () => this.auth.signOut();
-
 }
 
 export default Firebase;
