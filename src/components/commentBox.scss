@@ -1,0 +1,19 @@
+.impressions {
+    background-color: $white-g-p;
+    border-radius: 0px 0px 11px 11px;
+    padding: 6px 12px 6px 15px;
+    display: flex;
+    align-items: center;
+}
+.upvotes {
+    width: 22px;
+    height: 23px;
+    margin-right: 57px;
+    background-image: url('https://static.overlay-tech.com/assets/ba7df764-9570-4002-a7e4-d282de0002fb.svg');
+}
+.commentBox {
+    width: 267px;
+    height: 27px;
+    background-color: $greay-g-p;
+    border-radius: 11px 11px 11px 0px;
+}

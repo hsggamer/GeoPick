@@ -1,0 +1,33 @@
+.uploadMessageButton {
+    display: flex;
+    align-items: center;
+}
+.flexWrapperTwo {
+    margin-right: 37px;
+    border-radius: 18px;
+    padding: 12px 21px 11px 22px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(245, 105, 32, 1);
+}
+.cancel {
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 24px;
+    color: $orange-g-p;
+}
+.flexWrapperOne {
+    background-color: rgba(245, 105, 32, 1);
+    border-radius: 18px;
+    padding: 13px 38px 12px 39px;
+    display: flex;
+    align-items: center;
+}
+.yes {
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgba(250, 250, 250, 1);
+}

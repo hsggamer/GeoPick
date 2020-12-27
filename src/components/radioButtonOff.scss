@@ -1,0 +1,20 @@
+.tickMarkOff {
+    padding: 2px 25px 2px 26px;
+    position: relative;
+}
+.ellipse10 {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    position: relative;
+    border: 1px solid $white-g-p;
+}
+.ellipse9 {
+    width: 16px;
+    height: 16px;
+    background-color: $white-g-p;
+    border-radius: 50%;
+    position: absolute;
+    right: 29px;
+    top: 6px;
+}

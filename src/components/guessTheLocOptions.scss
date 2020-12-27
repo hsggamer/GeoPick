@@ -1,0 +1,59 @@
+.guessTheLocationInterface {
+    background-color: $black-g-p;
+    border-radius: 22px;
+    padding: 10px 8px 20px 7px;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.relativeWrapperOne {
+    margin-bottom: 17px;
+    margin-left: 2px;
+    position: relative;
+}
+.thePin {
+    padding: 0 4px 3px 0;
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    right: -17px;
+    bottom: -1px;
+}
+.pin3 {
+    position: relative;
+    transform: rotate(15deg);
+}
+.pin2 {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    transform: rotate(15deg);
+}
+.pin1 {
+    position: absolute;
+    left: 6px;
+    top: 4px;
+    transform: rotate(-67.2deg);
+}
+.guessTheLocation {
+    width: 65px;
+    position: relative;
+    @include normal;
+    color: $orange-g-p;
+    & .guessTheLocationEmphasis2 {
+        @include semibold;
+        color: $orange-g-p;
+        letter-spacing: 1px;
+    }
+}
+.option1 {
+    width: 125px;
+    height: 25px;
+    background-color: $white-g-p;
+    border-radius: 22px;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+    &:not(:last-of-type) {
+        margin-bottom: 14px;
+    }
+}

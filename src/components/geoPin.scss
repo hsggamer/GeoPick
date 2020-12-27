@@ -1,0 +1,14 @@
+.geoPin {
+    padding: 2px 2px 3px 1px;
+    position: relative;
+    background-image: url('https://static.overlay-tech.com/assets/0de74fd2-768b-4400-a8e5-68d935239030.svg');
+}
+.vector {
+    position: relative;
+}
+.pinHole {
+    position: absolute;
+    left: 12px;
+    top: 11px;
+    transform: rotate(-82.2deg);
+}

@@ -1,0 +1,28 @@
+.postHeader {
+    display: flex;
+    align-items: flex-start;
+}
+.ellipse1 {
+    width: 35px;
+    height: 35px;
+    background-color: $white-g-p;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+.displayPic {
+    width: 87px;
+    height: 29px;
+    background-color: $white-g-p;
+    margin-top: 3px;
+    margin-right: 150px;
+    border-radius: 22px;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+}
+.date {
+    width: 93px;
+    height: 29px;
+    background-color: $white-g-p;
+    margin-top: 6px;
+    border-radius: 22px;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+}

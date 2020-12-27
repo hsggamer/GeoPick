@@ -1,0 +1,42 @@
+.guessTheLocation {
+    background-color: $black-g-p;
+    border-radius: 22px;
+    padding: 2px 22px 3px 9px;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+.thePin {
+    padding: 0 4px 3px 0;
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    right: 5px;
+    top: 3px;
+}
+.pinOutline {
+    position: relative;
+    transform: rotate(15deg);
+}
+.pinContained {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    transform: rotate(15deg);
+}
+.vector {
+    position: absolute;
+    left: 6px;
+    top: 4px;
+    transform: rotate(-67.2deg);
+}
+.guessTheLocationText {
+    width: 65px;
+    position: relative;
+    @include normal;
+    color: $orange-g-p;
+    & .guessTheLocationEmphasis2 {
+        @include semibold;
+        color: $orange-g-p;
+        letter-spacing: 1px;
+    }
+}

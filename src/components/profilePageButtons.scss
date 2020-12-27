@@ -1,0 +1,9 @@
+.profilePageButtons {
+    display: flex;
+    align-items: flex-start;
+}
+.signOutButton {
+    &:not(:last-of-type) {
+        margin-right: 26px;
+    }
+}

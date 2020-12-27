@@ -1,0 +1,26 @@
+.navbar {
+    display: flex;
+    align-items: flex-start;
+}
+.home {
+    margin-top: 19px;
+    &:not(:last-of-type) {
+        margin-right: 48px;
+    }
+}
+.search {
+    margin-top: 19px;
+    margin-right: 46px;
+}
+.add {
+    background-color: rgba(245, 105, 32, 1);
+    margin-right: 44px;
+    border-radius: 50%;
+    padding: 10px 8px 11px 7px;
+    display: flex;
+    align-items: center;
+}
+.explore {
+    margin-top: 15px;
+    margin-right: 46px;
+}
