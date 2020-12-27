@@ -1,4 +1,4 @@
-guess the location:
+guess the location(expanded):
 
 import React from "react";
 import styles from "./GuessTheLocationInterface.module.scss";
@@ -327,4 +327,562 @@ SCSS:
   background-color: $white-g-p;
   border-radius: 20px;
   border: 1px solid rgba(245, 105, 32, 1);
+}
+
+Guess the location:
+
+import React from "react";
+import styles from "./GuessTheLocation.module.scss";
+
+const GuessTheLocation = ({
+  guessTheLocationText = (
+    <>
+      Guess the{" "}
+      <strong className={styles.guessTheLocationEmphasis2}>
+        location
+      </strong>
+    </>
+  )
+}) => {
+  return (
+    <div className={styles.guessTheLocation}>
+      <div className={styles.thePin}>
+        <img
+          alt=""
+          className={styles.pinOutline}
+          src="https://static.overlay-tech.com/assets/bc3ee24c-a892-4c4d-a718-3e1bdafe2807.svg"
+        />
+        <img
+          alt=""
+          className={styles.pinContained}
+          src="https://static.overlay-tech.com/assets/dea7ab92-a026-4cfc-ba58-2d227083b7f7.svg"
+        />
+        <img
+          alt=""
+          className={styles.vector}
+          src="https://static.overlay-tech.com/assets/824138b5-0a51-431d-b43c-958cb0f09577.svg"
+        />
+      </div>
+      <p className={styles.guessTheLocationText}>
+        {guessTheLocationText}
+      </p>
+    </div>
+  );
+};
+
+export default GuessTheLocation;
+
+SCSS:
+
+.guessTheLocation {
+  background-color: $black-g-p;
+  border-radius: 22px;
+  padding: 2px 22px 3px 9px;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+.thePin {
+  padding: 0 4px 3px 0;
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  right: 5px;
+  top: 3px;
+}
+.pinOutline {
+  position: relative;
+  transform: rotate(15deg);
+}
+.pinContained {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  transform: rotate(15deg);
+}
+.vector {
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  transform: rotate(-67.2deg);
+}
+.guessTheLocationText {
+  width: 65px;
+  position: relative;
+  @include normal;
+  color: $orange-g-p;
+  & .guessTheLocationEmphasis2 {
+    @include semibold;
+    color: $orange-g-p;
+    letter-spacing: 1px;
+  }
+}
+
+RadioButton(OFF):
+
+import React from "react";
+import styles from "./TickMarkOff.module.scss";
+
+const TickMarkOff = () => {
+  return (
+    <div className={styles.tickMarkOff}>
+      <div className={styles.ellipse10} />
+      <div className={styles.ellipse9} />
+    </div>
+  );
+};
+
+export default TickMarkOff;
+
+SCSS:
+
+.tickMarkOff {
+  padding: 2px 25px 2px 26px;
+  position: relative;
+}
+.ellipse10 {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid $white-g-p;
+}
+.ellipse9 {
+  width: 16px;
+  height: 16px;
+  background-color: $white-g-p;
+  border-radius: 50%;
+  position: absolute;
+  right: 29px;
+  top: 6px;
+}
+
+RadioButton(ON):
+
+import React from "react";
+import styles from "./TickMarkOn.module.scss";
+
+const TickMarkOn = () => {
+  return (
+    <div className={styles.tickMarkOn}>
+      <div className={styles.ellipse10} />
+      <div className={styles.ellipse9} />
+    </div>
+  );
+};
+
+export default TickMarkOn;
+
+SCSS:
+
+.tickMarkOn {
+  padding: 2px 25px 2px 26px;
+  position: relative;
+}
+.ellipse10 {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid rgba(245, 105, 32, 1);
+}
+.ellipse9 {
+  width: 16px;
+  height: 16px;
+  background-color: rgba(245, 105, 32, 1);
+  border-radius: 50%;
+  position: absolute;
+  right: 29px;
+  top: 6px;
+}
+
+Toggle Button(ON):
+
+import React from "react";
+import styles from "./ToggleButtonOn.module.scss";
+
+const ToggleButtonOn = () => {
+  return (
+    <div className={styles.toggleButtonOn}>
+      <div className={styles.ellipse9} />
+    </div>
+  );
+};
+
+export default ToggleButtonOn;
+
+SCSS:
+
+.toggleButtonOn {
+  border-radius: 88px;
+  padding: 2px 3px 2px 48px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(245, 105, 32, 1);
+}
+.ellipse9 {
+  width: 22px;
+  height: 22px;
+  background-color: rgba(245, 105, 32, 1);
+  border-radius: 50%;
+}
+
+Toggle Button(OFF):
+
+import React from "react";
+import styles from "./ToggleButtonOff.module.scss";
+
+const ToggleButtonOff = () => {
+  return (
+    <div className={styles.toggleButtonOff}>
+      <div className={styles.ellipse9} />
+    </div>
+  );
+};
+
+export default ToggleButtonOff;
+
+SCSS:
+
+.toggleButtonOff {
+  border-radius: 88px;
+  padding: 2px 48px 2px 3px;
+  display: flex;
+  align-items: center;
+  border: 1px solid $white-g-p;
+}
+.ellipse9 {
+  width: 22px;
+  height: 22px;
+  background-color: $white-g-p;
+  border-radius: 50%;
+}
+
+Camera Upload:
+
+import React from "react";
+import styles from "./Component1.module.scss";
+
+const Component1 = () => {
+  return (
+    <div className={styles.component1}>
+      <img
+        alt=""
+        src="https://static.overlay-tech.com/assets/cfc86984-d784-4e57-87d4-57e19236c699.svg"
+      />
+    </div>
+  );
+};
+
+export default Component1;
+
+SCSS:
+
+.component1 {
+  background-color: $white-g-p;
+  border-radius: 50%;
+  padding: 14px 10px;
+  display: flex;
+  align-items: center;
+}
+
+GeoPin:
+
+import React from "react";
+import styles from "./GeoPin.module.scss";
+
+const GeoPin = () => {
+  return (
+    <div className={styles.geoPin}>
+      <img
+        alt=""
+        className={styles.vector}
+        src="https://static.overlay-tech.com/assets/f355c7e8-2bd0-4618-a52a-ca896f6c10a2.svg"
+      />
+      <img
+        alt=""
+        className={styles.pinHole}
+        src="https://static.overlay-tech.com/assets/1cf0320c-8531-4a0b-8a49-832ed1f79e7a.svg"
+      />
+    </div>
+  );
+};
+
+export default GeoPin;
+
+SCSS:
+
+.geoPin {
+  padding: 2px 2px 3px 1px;
+  position: relative;
+  background-image: url("https://static.overlay-tech.com/assets/0de74fd2-768b-4400-a8e5-68d935239030.svg");
+}
+.vector {
+  position: relative;
+}
+.pinHole {
+  position: absolute;
+  left: 12px;
+  top: 11px;
+  transform: rotate(-82.2deg);
+}
+
+Common Button:
+import React from "react";
+import styles from "./CommonButton.module.scss";
+
+const CommonButton = () => {
+  return <div className={styles.commonButton} />;
+};
+
+export default CommonButton;
+
+SCSS:
+
+.commonButton {
+  width: 200px;
+  height: 49px;
+  background-color: $white-g-p;
+  border-radius: 18px;
+}
+
+Primary Button:
+
+import React from "react";
+import styles from "./PrimButton.module.scss";
+
+const PrimButton = () => {
+  return <div className={styles.primButton} />;
+};
+
+export default PrimButton;
+
+SCSS:
+
+.primButton {
+  width: 200px;
+  height: 49px;
+  background-color: rgba(245, 105, 32, 1);
+  border-radius: 18px;
+}
+
+Secondary Button:
+
+import React from "react";
+import styles from "./SecButton.module.scss";
+
+const SecButton = () => {
+  return <div className={styles.secButton} />;
+};
+
+export default SecButton;
+
+SCSS:
+
+.secButton {
+  width: 194px;
+  height: 43px;
+  border-radius: 18px;
+  border: 3px solid rgba(245, 105, 32, 1);
+}
+
+Text Area:
+
+import React from "react";
+import styles from "./TextArea.module.scss";
+
+const TextArea = () => {
+  return <div className={styles.textArea} />;
+};
+
+export default TextArea;
+
+.textArea {
+  width: 368px;
+  height: 243px;
+  background-color: $white-g-p;
+  border-radius: 20px;
+}
+
+Post header(containing the DP,username and date of a post):
+import React from "react";
+import styles from "./PostHeader.module.scss";
+
+const PostHeader = () => {
+  return (
+    <div className={styles.postHeader}>
+      <div className={styles.ellipse1} />
+      <div className={styles.username} />
+      <div className={styles.date} />
+    </div>
+  );
+};
+
+export default PostHeader;
+
+SCSS:
+
+.postHeader {
+  display: flex;
+  align-items: flex-start;
+}
+.ellipse1 {
+  width: 35px;
+  height: 35px;
+  background-color: $white-g-p;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+.username {
+  width: 87px;
+  height: 29px;
+  background-color: $white-g-p;
+  margin-top: 3px;
+  margin-right: 150px;
+  border-radius: 22px;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+}
+.date {
+  width: 93px;
+  height: 29px;
+  background-color: $white-g-p;
+  margin-top: 6px;
+  border-radius: 22px;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+}
+
+Search Post(The summary pictures of the username searched)
+
+import React from "react";
+import styles from "./SearchPost.module.scss";
+
+const SearchPost = ({
+  num20October = <>20 october</>,
+  doeJohn = "doe.john"
+}) => {
+  return (
+    <div className={styles.searchPost}>
+      <div className={styles.ellipse1} />
+      <div className={styles.flexWrapperOne}>
+        <p className={styles.num20October}>
+          {num20October}
+        </p>
+      </div>
+      <div className={styles.flexWrapperTwo}>
+        <p className={styles.doeJohn}>{doeJohn}</p>
+      </div>
+      <div className={styles.flexWrapperThree}>
+        <div className={styles.post1} />
+        <div className={styles.flexWrapperFour}>
+          <div className={styles.post2} />
+          <div className={styles.flexWrapperFive}>
+            <div className={styles.post3} />
+            <div className={styles.flexWrapperFour}>
+              <div className={styles.miniPost} />
+              <div className={styles.miniPost} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SearchPost;
+
+SCSS:
+
+.searchPost {
+  padding: 17px 0 0;
+  position: relative;
+}
+.ellipse1 {
+  width: 35px;
+  height: 35px;
+  background-color: $white-g-p;
+  border-radius: 50%;
+  position: absolute;
+  left: 11px;
+  top: 0;
+}
+.flexWrapperOne {
+  background-color: $white-g-p;
+  border-radius: 22px;
+  padding: 4px 2px 5px 5px;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 6px;
+  top: 3px;
+}
+.num20October {
+  width: 88px;
+  font-family: "Montserrat";
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(27, 27, 30, 1);
+}
+.flexWrapperTwo {
+  background-color: $white-g-p;
+  border-radius: 22px;
+  padding: 4px 0 6px 8px;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 55px;
+  top: 2px;
+}
+.doeJohn {
+  width: 79px;
+  font-family: "Montserrat";
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(27, 27, 30, 1);
+}
+.flexWrapperThree {
+  padding: 37px 5px 23px 16px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  background-image: url("https://static.overlay-tech.com/assets/7bad87de-9084-4a96-adec-a2ede1b824ee.svg");
+}
+.post1 {
+  width: 184px;
+  height: 235px;
+  background-color: $white-g-p;
+  margin-right: 10px;
+  border-radius: 17px;
+}
+.flexWrapperFour {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.post2 {
+  width: 184px;
+  height: 95px;
+  background-color: $white-g-p;
+  margin-bottom: 16px;
+  border-radius: 17px;
+}
+.flexWrapperFive {
+  display: flex;
+  align-items: flex-start;
+}
+.post3 {
+  width: 103px;
+  height: 124px;
+  background-color: $white-g-p;
+  margin-right: 3px;
+  border-radius: 17px;
+}
+.miniPost {
+  width: 83px;
+  height: 61px;
+  background-color: $white-g-p;
+  border-radius: 17px;
+  &:not(:last-of-type) {
+    margin-bottom: 2px;
+  }
 }
