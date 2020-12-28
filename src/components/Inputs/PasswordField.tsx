@@ -37,7 +37,6 @@ export default function PasswordField(props: InputBaseProps) {
         <>
             <OutlinedInput
                 name="Password"
-                about
                 id="outlined-adornment-password"
                 type={values.showPassword ? 'text' : 'password'}
                 value={values.password}
