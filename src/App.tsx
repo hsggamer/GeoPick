@@ -1,19 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import WelcomeScreen from './pages/welcome screen';
+import SignInScreen from './pages/sign-in screen';
+import SignUpScreen from './pages/sign-up screen';
 
 function App(): JSX.Element {
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                    Learn React
-                </a>
-            </header>
+            <Router>
+                <Nav />
+                <Switch>
+                    <Route exact path="/welcome">
+                        <WelcomeScreen />
+                    </Route>
+                    <Route exact path="/sign-in">
+                        <SignInScreen />
+                    </Route>
+                    <Route exact path="/sign-up">
+                        <SignUpScreen />
+                    </Route>
+                </Switch>
+            </Router>
+        </div>
+    );
+}
+
+function Nav() {
+    return (
+        <div>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to="/welcome">Welcome</Link>
+                    </li>
+                    <li>
+                        <Link to="/sign-in">Sign-In</Link>
+                    </li>
+                    <li>
+                        <Link to="/sign-up">Sign-Up</Link>
+                    </li>
+                </ul>
+            </nav>
         </div>
     );
 }

@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import app from 'firebase/app';
 import 'firebase/auth';
+import fb from 'firebase';
 import cred from '../constants/firebase-creds.json';
 import 'dot-env';
 
@@ -24,9 +25,9 @@ const devConfig = {
 
 const config = process.env.NODE_ENV === 'production' ? prodConfig : devConfig;
 
-class Firebase {
+class firebase {
     auth: app.auth.Auth; // variable assigned for auth
-
+    static auth: app.auth.Auth;
     constructor() {
         app.initializeApp(config);
         this.auth = app.auth(); // auth api, use this.auth to use it
@@ -46,4 +47,5 @@ class Firebase {
     doSignOut = () => this.auth.signOut();
 }
 
-export default Firebase;
+export type User = fb.User;
+export default firebase;

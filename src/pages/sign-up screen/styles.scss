@@ -1,44 +1,39 @@
-body{
-    background-color: black;
-  }
-  .App {
-    margin-top: 3% ;
+.PageSignUp {
+    margin-top: 3%;
     text-align: center;
     color: white;
-  
-  }
-  .App h1{
+    background-color: black;
+}
+.PageSignUp h1 {
     margin-right: 150px;
     font-size: 50px;
-    font-family:Arial, Helvetica, sans-serif;
-    
-  }
-  .App span{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.PageSignUp span {
     color: rgb(255, 81, 0);
-  }
-  
-  .Sign-Up{
+}
+
+.Sign-Up {
     background-color: rgb(255, 81, 0);
     width: 365px;
     height: 455px;
     margin-left: 37%;
     padding-top: 1px;
     border-radius: 18px;
-  }
-  
-  .Sign-Up span{
+}
+
+.Sign-Up span {
     color: rgb(63, 58, 58);
-    font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  
-  }
-  .Sign-Up p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Sign-Up p {
     text-align: left;
-    font-size:x-large;
+    font-size: x-large;
     margin-left: 20px;
     font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .form{
+}
+
+.form {
     margin-bottom: 20px;
     border-radius: 16px;
     border: none;
@@ -46,9 +41,9 @@ body{
     width: 320px;
     height: 20px;
     text-decoration: none;
-  }
-  
-  .signin-btn{
+}
+
+.signin-btn {
     width: 195px;
     height: 45px;
     border-radius: 18px;
@@ -57,10 +52,8 @@ body{
     font-size: 17px;
     border: none;
     color: orange;
-    font-weight:bolder;
-  }
-  .radio-btn{
-    margin-top: 20px; 
-  }
-  
-  
+    font-weight: bolder;
+}
+.radio-btn {
+    margin-top: 20px;
+}
