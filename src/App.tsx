@@ -4,12 +4,14 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import WelcomeScreen from './pages/welcome screen';
 import SignInScreen from './pages/sign-in screen';
 import SignUpScreen from './pages/sign-up screen';
+import PasswordField from './components/Inputs/PasswordField';
 
 function App(): JSX.Element {
     return (
         <div className="App">
             <Router>
                 <Nav />
+                <PasswordField />
                 <Switch>
                     <Route exact path="/welcome">
                         <WelcomeScreen />
